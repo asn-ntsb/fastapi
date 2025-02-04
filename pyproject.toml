@@ -1,0 +1,29 @@
+[project]
+name = "fastapi-app"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Arsen", email = "arsen_nazaryan@edu.aua.am" }
+]
+dependencies = [
+    "fastapi>=0.115.8",
+    "uvicorn>=0.34.0",
+    "pydantic>=2.10.6",
+    "typing>=3.10.0.0",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fastapi_app"]
